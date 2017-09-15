@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>git命令</title>
+    <style>
+        .doc {
+        }
+        .doc h3 {
+            padding:0 35px;
+        }
+        .doc p{
+            padding:0 15px;
+        }
+    </style>
+</head>
+<body>
+  <div class="doc">
+      <h3>Git 命令</h3>
+      <p>初始化本地仓库：git init</p>
+      <p>查看仓库中所有的文件状：git status</p>
+      <p>把工作目录中的文件添加到暂存区：git add 文件列表； git add *</p>
+      <p>把暂存区中的代码添加到本地仓库：git commit -m 备注信息</p>
+      <p> 回滚操作：</br>
+          &nbsp&nbsp&nbsp  git reset</br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  --hard   回滚本地仓库的快照；使用本地仓库快照覆盖暂存区；使用本地仓库快照覆盖工作目录</br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  --soft 只回滚本地仓库的快照</br>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  --mixed（默认） 回滚本地仓库的快照 并且 覆盖暂存区，但是不覆盖工作目录</br>
+      </p>
+      <p>删除暂存区指定的文件：git rm --cached </p>
+      <p>回滚修改操作(使用暂存区覆盖工作目录)：</br>
+          &nbsp&nbsp&nbsp (1)git checkout -- 文件列表</br>
+          &nbsp&nbsp&nbsp  (2)git checkout .  回滚所有操作</br>
+      </p>
+      <p>分支：</p>
+      <p>查看分支：git branch</p>
+      <p>创建分支：git branch 分支名称</p>
+      <p>切换分支：git checkout 分支名称</p>
+      <p>创建并切换分支：git checkout -b 分支名称</p>
+      <p>合并分支：git merge 分支名称（来源分支）</p>
+      <p>删除分支：</br>
+          git branch -d 分支名称（如果分支被合并过了才可以删除，否则不可以）</br>
+          git branch -D 分支名称（强制删除）
+      </p>
+      <p>远程仓库：</br>
+          （1）上传代码：</br>
+          &nbsp git push 远程仓库的地址 本地分支名称:远程分支名称</br>
+          &nbsp git push 远程仓库的地址 本地分支名称</br>
+          （2）下载代码：</br>
+          &nbsp git pull 远程仓库的地址 远程分支名称:本地分支名称</br>
+          &nbsp git pull 远程仓库的地址 远程分支名称</br>
+          第一次下载代码一般使用如下的命令：</br>
+          git clone 远程仓库的地址 [项目名称]
+      </p>
+      <p>克隆代码：git clone 远程仓库地址 [项目名称]</p>
+      <p>更新代码：git pull 远程仓库地址 远程分支名称:本地分支名称</p>
+      <p>上传代码：git push 远程仓库地址 本地分支名称:远程分支名称</p>
+      <p>查看别名：git remote -v</p>
+      <p>添加别名：git remote add 别名名称 远程仓库地址</p>
+      <p>删除别名：git remote remove 别名名称</p>
+      <p>删除远程分支：</br>
+          &nbsp git push origin --delete 分支名称</br>
+          &nbsp git push origin :分支名称</p>
+      <p>.gitignore文件的作用是排除一些文件或者目录，使其不被git管理</p>
+      <p>保存现场：</br>
+          &nbsp git stash</br>
+          &nbsp git stash pop</p>
+  </div>
+</body>
+</html>
